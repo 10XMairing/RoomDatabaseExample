@@ -20,16 +20,12 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         final EditText etTask = findViewById(R.id.etTask);
-        final EditText etStart = findViewById(R.id.etStartTime);
-        final EditText etEnd = findViewById(R.id.etEndTime);
         Button btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String task = etTask.getText().toString();
-                String start = etStart.getText().toString();
-                String end = etEnd.getText().toString();
-                ToDo toDo = new ToDo(task, start, end);
+                ToDo toDo = new ToDo(task, "", "");
                 Intent replyIntent = new Intent();
                 if(TextUtils.isEmpty(etTask.getText())){
                     setResult(RESULT_CANCELED, replyIntent);

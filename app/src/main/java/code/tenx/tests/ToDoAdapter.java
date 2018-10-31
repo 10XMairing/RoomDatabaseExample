@@ -41,8 +41,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder
         ToDo currentToDo = mList.get(position);
 
         holder.tvtask.setText(currentToDo.getmTask());
-        holder.tvStart.setText(currentToDo.getmStartTime());
-        holder.tvEnd.setText(currentToDo.getmEndTime());
     }
 
 
@@ -57,12 +55,11 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder
     }
 
     class ToDoViewHolder extends RecyclerView.ViewHolder{
-        TextView tvtask, tvStart, tvEnd;
+        TextView tvtask;
          ToDoViewHolder(View itemView) {
             super(itemView);
             tvtask = itemView.findViewById(R.id.tvTaskOutput);
-            tvStart = itemView.findViewById(R.id.tvStartOutput);
-            tvEnd = itemView.findViewById(R.id.tvEndOutput);
+
         }
     }
 }
